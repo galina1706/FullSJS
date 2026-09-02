@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(189, 173, 189);
+}
+section > p {
+    background-color: yellow;
+}
+button{
+    padding: 10px;
+    border-radius: 8px;
+}
+.cdk-container{
+    background-color: rgb(128, 38, 128);
+}
+#unique-id{
+    background-color: rgb(219, 223, 230);
+}
+img[alt="puppy"]{
+    width: 250px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+.container span{
+    color: red;
+}
+.container2 > span{
+    color: yellow;
+}
+.container3 > p > span{
+    color: green;
+}
+.container4 .red-text{
+    color: red;
+}
+.container4 #blue-color{
+    color: blue;
+}

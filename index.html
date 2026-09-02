@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section>
+  <p>Selector: section > p (0, 0, 0, 2)</p>
+</section>
+<div>
+
+  <button>Selector: button (0, 0, 0, 1)</button>
+
+  <div class="cdk-container">Selector: .cdk-container (0, 0, 1, 0)</div>
+  <div id="unique-id">Selector: #unique-id (0, 1, 0, 0)</div>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Golde33443.jpg/500px-Golde33443.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="puppy">
+
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet, <span>Selector: .container span (0, 0, 1, 1)</span> adipisicing elit.</p>
+  </div>
+  <div class="container2">
+    <p>Lorem ipsum dolor sit amet, <span>some text</span> adipisicing elit.</p>
+    <span>Selector: .container2 > span (0, 0, 1, 1)</span>
+  </div>
+
+  <div class="container3">
+    <p>Lorem ipsum dolor sit amet, <span>Selector: .container3 > p > span (0, 0, 1, 2)</span> adipisicing elit.</p>
+    <div>Lorem ipsum dolor sit hhh amet, <span>consectetur</span> adipisicing elit.</div>
+  </div>
+  <div class="container4">
+    <p>Lorem ipsum dolor sit amet, <span id="blue-color">Selector: .container4 .red-text (0, 0, 2, 0)</span> adipisicing <span class="red-text">Selector: .container4 #blue-color (0, 1, 1, 0)</span> elit.</p>
+  </div>
+
+</div>
+</body>
+</html>

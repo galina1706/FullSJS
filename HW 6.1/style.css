@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrap {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 700px;
+    height: 700px;
+    /*border: 10px solid #000;*/
+    table-layout: fixed;
+    background: #ffffff;
+}
+
+td {
+    border: 6px solid #000;
+    padding: 0;
+}
+
+.white  { background: #ffffff; }
+.red    { background: #d8342a; }
+.yellow { background: #f4c518; }
+.blue   { background: #1c3faa; }
+.black  { background: #111111; }
+
+caption {
+    caption-side: bottom;
+    padding-top: 14px;
+    color: #444;
+    font-size: 14px;
+}
+
+.mondrian-table td.anchor-cell {
+    border-color: white !important;
+}

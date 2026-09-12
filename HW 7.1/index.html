@@ -3,17 +3,26 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Туристичний гід — Головна (reset.css)</title>
-  <link rel="stylesheet" href="/reset.css">
-  <link rel="stylesheet" href="/style.css"/>
+  <title>Туристичний гід — Головна (normalize.css)</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+
+
+<nav style="background: #2c3e50; padding: 15px; text-align: center; font-family: sans-serif;">
+  <a href="../" style="color: #e74c3c; text-decoration: none; font-weight: bold; margin-right: 30px; float: left;">⬅ Назад до всіх домашок</a>
+  <span style="color: #fff; margin-right: 15px; font-weight: bold;">Перейти до сторінок:</span>
+  <a href="index.html" style="color: #3498db; text-decoration: none; font-weight: bold; margin-right: 20px; border-bottom: 2px solid #3498db;">Головна (Normalize)</a>
+  <a href="reset.html" style="color: #ecf0f1; text-decoration: none; font-weight: bold;">Сторінка Reset</a>
+</nav>
+
+
 <div class="container">
   <header class="page-header">
-    <h1>reset.css</h1>
-    <p><span class="inline-demo">Ласкаво просимо!</span>Це демо-сторінка з <strong>reset.css</strong>.</p>
+    <h1>normalize.css</h1>
+    <p><span>Ласкаво просимо!</span>Це demo-сторінка з <strong>normalize.css</strong>.</p>
   </header>
-
 
   <section>
     <h2>Блокові vs Інлайнові</h2>
@@ -23,7 +32,6 @@
       <span>Ще один <span>інлайн-спан</span> із фоном.</span>
     </div>
   </section>
-
 
   <section>
     <h2>Display та Box-sizing</h2>
@@ -40,7 +48,6 @@
     <div class="box-sizing-demo box-sizing-border">border-box (200px включає падінги і бордер)</div>
   </section>
 
-
   <section>
     <h2>Float та Clear</h2>
     <div class="float-wrap">
@@ -51,7 +58,6 @@
       <div class="clear-both">clear: both — цей блок не обтікає жоден float</div>
     </div>
   </section>
-
 
   <section>
     <h2>Overflow експерименти</h2>
@@ -76,7 +82,6 @@
       </div>
     </div>
   </section>
-
 
   <section>
     <h2>Позиціонування</h2>
@@ -104,13 +109,12 @@
     </div>
   </section>
 
-
   <section>
-    <h2>Експеримент: reset.css</h2>
+    <h2>Експеримент: normalize.css</h2>
     <div class="experiment-note note-normalize">
-      <p><strong>До підключення reset.css:</strong> у різних браузерах відступи, розміри шрифтів і стилі за замовчуванням відрізняються.</p>
-      <p><strong>Після підключення reset.css:</strong> стилі скидаються на 0</p>
-      <p><strong>Висновок:</strong> reset.css все скидає</p>
+      <p><strong>До підключення normalize.css:</strong> у різних браузерах відступи, розміри шрифтів і стилі за замовчуванням відрізняються.</p>
+      <p><strong>Після підключення normalize.css:</strong> стилі стали однаковими в усіх сучасних браузерах. normalize <em>не скидає все в нуль</em>, а лише <strong>уніфікує</strong> стандартні стилі, залишаючи корисні дефолти.</p>
+      <p><strong>Висновок:</strong> normalize.css робить початкову точку розробки передбачуваною, зберігаючи доступність і читабельність.</p>
     </div>
   </section>
 

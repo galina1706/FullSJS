@@ -1,0 +1,143 @@
+body{
+    background-color: rgb(189, 173, 189);
+}
+section > p {
+    background-color: yellow;
+}
+button{
+    padding: 10px;
+    border-radius: 8px;
+}
+.cdk-container{
+    background-color: rgb(128, 38, 128);
+}
+#unique-id{
+    background-color: rgb(219, 223, 230);
+}
+img[alt="puppy"]{
+    width: 250px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+}
+.container span{
+    color: red;
+}
+.container2 > span{
+    color: yellow;
+}
+.container3 > p > span{
+    color: green;
+}
+.container4 .red-text{
+    color: red;
+}
+.container4 #blue-color{
+    color: blue;
+}
+
+.display-inline{
+    display: inline;
+}
+.display-flex{
+    display: flex;
+}
+.box-sizing-demo{
+    width: 200px;
+    padding: 20px;
+    border: 1px solid black;
+}
+.box-sizing-border{
+    box-sizing: border-box;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.block{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    border: 1px solid black;
+}
+.clear-left{
+    clear: left;
+}
+.clear-both{
+    clear: both;
+}
+.overflow-container{
+    width: 400px;
+    height: 40px;
+    border: 1px solid black;
+    margin: 5px 20px 40px 20px;
+}
+.overflow-hidden{
+    overflow: hidden
+}
+.overflow-scroll{
+    overflow-y: scroll;
+}
+
+.pos-container{
+    position: relative;
+    height: 220px;
+    border: 2px dashed #555;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+.pos-static{
+    position: static;
+    background-color: #cde;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.pos-relative{
+    position: relative;
+    top: 15px;
+    left: 30px;
+    background-color: #dfc;
+    padding: 10px;
+    width: 250px;
+}
+
+.pos-absolute{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #fcd;
+    padding: 10px;
+    width: 260px;
+}
+
+.sticky-wrapper{
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #999;
+}
+
+.pos-sticky{
+    position: sticky;
+    top: 0;
+    background-color: #ffb347;
+    padding: 12px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.sticky-content p{
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+.fixed-button{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    z-index: 100;
+}

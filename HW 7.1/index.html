@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Туристичний гід — Головна (normalize.css)</title>
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav style="background: #2c3e50; padding: 15px; text-align: center; font-family: sans-serif;">
+  <a href="../" style="color: #e74c3c; text-decoration: none; font-weight: bold; margin-right: 30px; float: left;">⬅ Назад до всіх домашок</a>
+  <span style="color: #fff; margin-right: 15px; font-weight: bold;">Перейти до сторінок:</span>
+  <a href="index.html" style="color: #3498db; text-decoration: none; font-weight: bold; margin-right: 20px; border-bottom: 2px solid #3498db;">Головна (Normalize)</a>
+  <a href="reset.html" style="color: #ecf0f1; text-decoration: none; font-weight: bold;">Сторінка Reset</a>
+</nav>
+
+
+<div class="container">
+  <header class="page-header">
+    <h1>normalize.css</h1>
+    <p><span>Ласкаво просимо!</span>Це demo-сторінка з <strong>normalize.css</strong>.</p>
+  </header>
+
+  <section>
+    <h2>Блокові vs Інлайнові</h2>
+    <div class="block-demo">
+      <span>Це <span>інлайн-елемент (span)</span> всередині блоку.</span>
+      <div>Це блоковий <code>&lt;div&gt;</code> — він займає всю ширину.</div>
+      <span>Ще один <span>інлайн-спан</span> із фоном.</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Display та Box-sizing</h2>
+    <div>Блоковий (display: block) за замовчуванням</div>
+    <div class="display-inline">Інлайн (display: inline) — ширина за вмістом</div>
+    <div class="display-flex">
+      <div>Flex 1</div>
+      <div>Flex 2</div>
+      <div>Flex 3</div>
+    </div>
+
+    <h3>Box-sizing:</h3>
+    <div class="box-sizing-demo">content-box (200px + падінги + бордер)</div>
+    <div class="box-sizing-demo box-sizing-border">border-box (200px включає падінги і бордер)</div>
+  </section>
+
+  <section>
+    <h2>Float та Clear</h2>
+    <div class="float-wrap">
+      <div class="block float-left">Float: left</div>
+      <div class="block float-right">Float: right</div>
+      <p>Цей текст обтікає елементи з float. Дуже зручно для макетів!</p>
+      <div class="clear-left">clear: left — цей блок не обтікає лівий float</div>
+      <div class="clear-both">clear: both — цей блок не обтікає жоден float</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Overflow експерименти</h2>
+    <div>
+      <div>
+        <strong>overflow: visible</strong>
+        <div class="overflow-container">
+          <p>Цей текст набагато довший за контейнер і виходить за його межі. Дуже багато тексту, щоб показати overflow.</p>
+        </div>
+      </div>
+      <div>
+        <strong>overflow: hidden</strong>
+        <div class="overflow-container overflow-hidden">
+          <p>Цей текст набагато довший за контейнер, але обрізається. Дуже багато тексту, щоб показати overflow.</p>
+        </div>
+      </div>
+      <div>
+        <strong>overflow: scroll</strong>
+        <div class="overflow-container overflow-scroll">
+          <p>Цей текст набагато довший за контейнер, з'являється скрол. Дуже багато тексту, щоб показати overflow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Позиціонування</h2>
+    <div class="pos-container">
+      <div class="pos-static">static (за замовчуванням)</div>
+      <div class="pos-relative">relative (зсунутий)</div>
+      <div class="pos-absolute">absolute (в правому нижньому куті батька)</div>
+    </div>
+
+    <h3>fixed vs sticky</h3>
+    <p><strong>fixed</strong> — завжди прив'язаний до вікна (кнопка справа внизу). <strong>sticky</strong> — липне під час скролу.</p>
+    <div class="sticky-wrapper">
+      <div class="pos-sticky">Це sticky — липне до верху при скролі</div>
+      <div class="sticky-content">
+        <p>Прокрути цей блок, щоб побачити sticky в дії.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Прокрути далі, щоб побачити, як sticky тримається зверху.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Експеримент: normalize.css</h2>
+    <div class="experiment-note note-normalize">
+      <p><strong>До підключення normalize.css:</strong> у різних браузерах відступи, розміри шрифтів і стилі за замовчуванням відрізняються.</p>
+      <p><strong>Після підключення normalize.css:</strong> стилі стали однаковими в усіх сучасних браузерах. normalize <em>не скидає все в нуль</em>, а лише <strong>уніфікує</strong> стандартні стилі, залишаючи корисні дефолти.</p>
+      <p><strong>Висновок:</strong> normalize.css робить початкову точку розробки передбачуваною, зберігаючи доступність і читабельність.</p>
+    </div>
+  </section>
+
+  <footer class="page-footer">
+    <p>© 2026 ExploreUA — Туристичний гід Україною</p>
+  </footer>
+</div>
+
+<div class="pos-fixed"> Fixed (завжди видно)</div>
+</body>
+</html>

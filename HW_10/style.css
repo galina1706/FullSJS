@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400..500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    border: none;
+}
+
+.container{
+    padding: 0 20px;
+}
+.section1-inner{
+    max-width: 651px;
+    margin-inline: auto;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.section1 {
+    background: #EEEFF1;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu_item{
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    cursor: pointer;
+}
+
+.active{
+    color: #34547A;
+    font-weight: 500;
+}
+
+.main{
+    margin: 160px 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 60px;
+}
+
+.main_heading{
+    color: #000;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.main_text{
+    color: #727272;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 540px;
+    line-height: 1.5;
+}
+
+.main_btn{
+    background: #34547A;
+    padding: 25px 41px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 164.063%;
+    letter-spacing: 1.6px;
+    cursor: pointer;
+}
+.section2{
+    padding-bottom: 100px;
+    padding-top: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.section2_heading{
+    color: #000;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.section2_text{
+    color: #727272;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 164.063%;
+    max-width: 540px;
+}
+
+.section3 {
+    background: #34547A;
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.section3_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 966px;
+    margin: 0 auto;
+}
+
+.list_item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.list_item_block {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.list_number {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.list_text {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.section4{
+    padding-bottom: 100px;
+    padding-top: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.section4_heading{
+    color: #000;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.section4_text{
+    color: #727272;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 164.063%;
+    max-width: 540px;
+}
+.video-wrapper{
+    width: 100%;
+    max-width: 1110px;
+    height: 600px;
+    position: relative;
+}
+.video{
+    width: 100%;
+    height: 100%;
+}
+.play-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+        opacity: 0.7;
+    }
+}
+.section5{
+    background: #34547A;
+    padding: 0 20px;
+}
+.section5-inner{
+    max-width: 966px;
+    margin: 0 auto;
+    height: 151px;
+    padding-top: 50px;
+}
+
+.section5_name{
+    color: #FFF;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.section5_copyright{
+    color: #FFF;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 164.063%;
+    margin-top: 20px;
+}
+@media screen and (max-width: 600px) {
+    .section1_menu{
+        gap: 8px;
+        justify-content: space-between;
+    }
+    .menu_item{
+        font-size: 12px;
+    }
+    .main{
+        margin-top: 40px;
+    }
+    .section1{
+        padding: 20px;
+    }
+    .main_btn{
+        padding: 5px 10px;
+    }
+
+    .video{
+        width: 90%;
+    }
+    .main_text{
+        padding-bottom: 20px;
+    }
+    .video-wrapper{
+        height: 200px;
+    }
+    .section5-inner{
+        padding-left: 20px;
+    }
+    .play-btn{
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .main_btn{
+        padding: 5px 10px;
+    }
+
+    .video{
+        width: 70%;
+    }
+    .play-btn{
+        width: 40px;
+    }
+}

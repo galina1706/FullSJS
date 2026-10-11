@@ -1,0 +1,18 @@
+@use 'variables' as *;
+
+@mixin button-styles($bg, $color) {
+  background: $bg;
+  color: $color;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  cursor: pointer;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media screen and (max-width: 600px) { @content; }
+  } @else if $breakpoint == small-mobile {
+    @media screen and (max-width: 375px) { @content; }
+  }
+}

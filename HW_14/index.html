@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Розробка адаптивного макету з використанням</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav style="background: #2c3e50; padding: 15px; text-align: center; font-family: sans-serif; box-sizing: border-box;">
+    <a href="../" style="color: #e74c3c; text-decoration: none; font-weight: bold; margin-right: 30px; float: left;">⬅ Назад до всіх домашок</a>
+    <span style="color: #fff; margin-right: 15px; font-weight: bold;">Ви переглядаєте:</span>
+    <a href="index.html" style="color: #3498db; text-decoration: none; font-weight: bold; border-bottom: 2px solid #3498db;">Домашка. Розробка адаптивного макету з використанням</a>
+</nav>
+<div class="page">
+
+    <header class=" block block-header">
+        <nav class="navbar navbar-expand-lg h-100 px-3" aria-label="Головне меню">
+            <a class="navbar-brand fw-bold text-uppercase" href="#">Карпати Тур</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+                    aria-controls="mainMenu" aria-expanded="false" aria-label="Відкрити меню">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Головна</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">Маршрути</a>
+                        <ul class="dropdown-menu rounded-0">
+                            <li><a class="dropdown-item" href="#">Говерла</a></li>
+                            <li><a class="dropdown-item" href="#">Піп Іван</a></li>
+                            <li><a class="dropdown-item" href="#">Синевир</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">Послуги</a>
+                        <ul class="dropdown-menu rounded-0">
+                            <li><a class="dropdown-item" href="#">Гіди</a></li>
+                            <li><a class="dropdown-item" href="#">Прокат спорядження</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Трансфер</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#booking">Контакти</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="row middle">
+
+        <div class="col-12 col-sm-6 col-lg-3">
+        <aside class="block block-left h-100">
+            <h2 class="block-title">Галерея</h2>
+            <div id="mountainSlider" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#mountainSlider" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Слайд 1"></button>
+                    <button type="button" data-bs-target="#mountainSlider" data-bs-slide-to="1"
+                            aria-label="Слайд 2"></button>
+                    <button type="button" data-bs-target="#mountainSlider" data-bs-slide-to="2"
+                            aria-label="Слайд 3"></button>
+                    <button type="button" data-bs-target="#mountainSlider" data-bs-slide-to="3"
+                            aria-label="Слайд 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/peak/400/600" class="slide-img" alt="Гірська вершина"
+                             width="400" height="600">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/forest/400/600" class="slide-img" alt="Гірський ліс"
+                             width="400" height="600">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/lake/400/600" class="slide-img" alt="Гірське озеро"
+                             width="400" height="600">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/trail/400/600" class="slide-img" alt="Туристична стежка"
+                             width="400" height="600">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#mountainSlider"
+                        data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Попередній</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mountainSlider"
+                        data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Наступний</span>
+                </button>
+            </div>
+        </aside>
+        </div>
+
+        <div class="col-12 col-lg-6 order-first order-lg-0">
+        <main class="block block-main h-100">
+            <h1 class="block-title">Популярні маршрути</h1>
+            <div class="accordion" id="routes">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#routeHoverla" aria-expanded="true" aria-controls="routeHoverla">
+                            Говерла — найвища точка України
+                        </button>
+                    </h2>
+                    <div id="routeHoverla" class="accordion-collapse collapse show" data-bs-parent="#routes">
+                        <div class="accordion-body">
+                            Висота 2061 м. Класичний підйом від бази «Заросляк» займає 3–4 години.
+                            Маршрут підходить для початківців у гарну погоду.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#routePip" aria-expanded="false" aria-controls="routePip">
+                            Піп Іван Чорногірський
+                        </button>
+                    </h2>
+                    <div id="routePip" class="accordion-collapse collapse" data-bs-parent="#routes">
+                        <div class="accordion-body">
+                            На вершині — руїни астрономічної обсерваторії «Білий слон».
+                            Перехід Чорногірським хребтом триває 1–2 дні.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#routeSynevyr" aria-expanded="false" aria-controls="routeSynevyr">
+                            Озеро Синевир
+                        </button>
+                    </h2>
+                    <div id="routeSynevyr" class="accordion-collapse collapse" data-bs-parent="#routes">
+                        <div class="accordion-body">
+                            «Морське око» Карпат на висоті 989 м. Легка прогулянка навколо озера
+                            та відвідування реабілітаційного центру бурого ведмедя.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+        <aside class="block block-right h-100" id="booking">
+            <h2 class="block-title">Бронювання</h2>
+            <form action="#" method="post">
+                <div class="mb-2">
+                    <label for="fullName" class="form-label small mb-1">Ім'я та прізвище</label>
+                    <input type="text" class="form-control form-control-sm rounded-0" id="fullName" name="fullName" required>
+                </div>
+                <div class="mb-2">
+                    <label for="email" class="form-label small mb-1">Email</label>
+                    <input type="email" class="form-control form-control-sm rounded-0" id="email" name="email" required>
+                </div>
+                <div class="mb-2">
+                    <label for="phone" class="form-label small mb-1">Телефон</label>
+                    <input type="tel" class="form-control form-control-sm rounded-0" id="phone" name="phone"
+                           placeholder="+380">
+                </div>
+                <div class="mb-2">
+                    <label for="route" class="form-label small mb-1">Маршрут</label>
+                    <select class="form-select form-select-sm rounded-0" id="route" name="route">
+                        <option value="hoverla">Говерла</option>
+                        <option value="pip-ivan">Піп Іван</option>
+                        <option value="synevyr">Синевир</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label for="tripDate" class="form-label small mb-1">Дата</label>
+                    <input type="date" class="form-control form-control-sm rounded-0" id="tripDate" name="tripDate">
+                </div>
+                <div class="mb-2">
+                    <label for="comment" class="form-label small mb-1">Коментар</label>
+                    <textarea class="form-control form-control-sm rounded-0" id="comment" name="comment" rows="2"></textarea>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="agree" name="agree" required>
+                    <label class="form-check-label" for="agree">Погоджуюсь з умовами</label>
+                </div>
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-dark btn-sm rounded-0">Надіслати</button>
+                    <button type="reset" class="btn btn-outline-secondary btn-sm rounded-0">Очистити</button>
+                </div>
+            </form>
+        </aside>
+        </div>
+
+    </div>
+
+    <footer class="block block-footer d-flex flex-column align-items-center justify-content-center text-center">
+        <p class="mb-1 text-uppercase fw-bold">Карпати Тур</p>
+        <p class="mb-0 small">&copy; 2026 · Яремче, Україна · info@karpaty-tour.example</p>
+    </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

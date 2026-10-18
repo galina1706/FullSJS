@@ -1,0 +1,63 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f6f7;
+    margin: 0;
+    padding: 0;
+}
+
+.svg-container {
+    text-align: center;
+    padding: 40px;
+}
+
+svg {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Стилізація фігур (товщина кордону 5px для кожної) */
+.shape-square {
+    fill: #ff6b6b;
+    stroke: #2c3e50;
+    stroke-width: 5px;
+}
+
+.shape-rectangle {
+    fill: #48dbfb;
+    stroke: #ff9f43;
+    stroke-width: 5px;
+}
+
+.shape-circle {
+    fill: #1dd1a1;
+    stroke: #5f27cd;
+    stroke-width: 5px;
+}
+
+.shape-ellipse {
+    fill: #feca57;
+    stroke: #ee5253;
+    stroke-width: 5px;
+}
+
+/* Анімація за допомогою CSS та класів */
+@keyframes colorAnimation {
+    0% {
+        fill: #1dd1a1;
+        stroke: #5f27cd;
+    }
+    50% {
+        fill: #ff9ff3;
+        stroke: #0984e3;
+    }
+    100% {
+        fill: #1dd1a1;
+        stroke: #5f27cd;
+    }
+}
+
+.animated-shape {
+    animation: colorAnimation 4s infinite ease-in-out;
+}

@@ -1,0 +1,32 @@
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.section5 {
+  background: $color-primary;
+  padding: 0 20px;
+
+  &-inner {
+    max-width: 966px;
+    margin: 0 auto;
+    height: 151px;
+    padding-top: 50px;
+
+    @include respond-to(mobile) {
+      padding-left: 20px;
+    }
+  }
+
+  &_name {
+    color: $color-light;
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  &_copyright {
+    color: $color-light;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 164.063%;
+    margin-top: 20px;
+  }
+}

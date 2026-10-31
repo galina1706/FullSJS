@@ -1,0 +1,66 @@
+:root {
+    --gap: 20px;
+    --block-bg: #f1f1f1;
+    --block-border: #b5b5b5;
+}
+
+body {
+    background-color: #fff;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    padding: var(--gap);
+}
+
+/* Спільний вигляд усіх блоків */
+.block {
+    background-color: var(--block-bg);
+    border: 1px solid var(--block-border);
+    border-radius: 0;
+}
+
+.block-title {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* HEADER і FOOTER однакові за висотою */
+.block-header,
+.block-footer {
+    min-height: 100px;
+}
+
+/* Середній ряд (сітка Bootstrap): проміжки між колонками 20px */
+.middle {
+    --bs-gutter-x: var(--gap);
+    --bs-gutter-y: var(--gap);
+}
+
+.block-left,
+.block-main,
+.block-right {
+    min-height: 200px;
+    padding: 16px;
+}
+
+/* Вертикальні зображення однакового розміру */
+.slide-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+}
+
+.accordion {
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-inner-border-radius: 0;
+    --bs-accordion-active-bg: #e2e2e2;
+    --bs-accordion-active-color: #212529;
+}

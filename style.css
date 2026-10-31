@@ -1,0 +1,11 @@
+
+.hero-bg {
+    background-image: url("https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1600&q=70");
+    background-size: cover;
+    background-position: center;
+}
+
+::selection {
+    background: #a8714a;
+    color: #fff;
+}

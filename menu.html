@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Меню - кав'ярня Зерно</title>
+    <meta name="description" content="Повне меню кав'ярні Зерно">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+            --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+
+            --color-coffee-50: #fbf7f3;
+            --color-coffee-100: #f3e9df;
+            --color-coffee-200: #e6d0bb;
+            --color-coffee-300: #d4b08f;
+            --color-coffee-500: #a8714a;
+            --color-coffee-600: #8c5a38;
+            --color-coffee-700: #6f452b;
+            --color-coffee-800: #4a2e1d;
+            --color-coffee-900: #2b1a10;
+            --color-coffee-950: #1a0f09;
+
+            --animate-fade-up: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+            --animate-hero-zoom: hero-zoom 20s ease-out both;
+            --animate-float: float 3s ease-in-out infinite;
+
+            @keyframes fade-up {
+                from { opacity: 0; transform: translateY(2rem); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes hero-zoom {
+                from { transform: scale(1.15); }
+                to { transform: scale(1); }
+            }
+            @keyframes float {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-0.35rem); }
+            }
+        }
+
+        @utility reveal {
+            animation: fade-up linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 30%;
+        }
+
+        @utility btn {
+            @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 font-semibold transition
+            focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coffee-500;
+        }
+        @utility btn-primary {
+            @apply btn bg-coffee-600 text-white shadow-lg shadow-coffee-600/30 hover:-translate-y-0.5 hover:bg-coffee-700;
+        }
+        @utility btn-ghost {
+            @apply btn border border-white/40 text-white hover:bg-white/10;
+        }
+        @utility section-title {
+            @apply font-serif text-4xl font-bold text-coffee-900 sm:text-5xl dark:text-coffee-50;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-coffee-50 font-sans text-coffee-800 antialiased dark:bg-coffee-950 dark:text-coffee-200">
+
+<header class="sticky top-0 z-50 border-b border-coffee-200/60 bg-coffee-50/80 backdrop-blur dark:border-coffee-800 dark:bg-coffee-950/80">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4" aria-label="Головне меню">
+        <a href="index.html" class="bg-gradient-to-r from-coffee-500 via-coffee-700 to-coffee-900 bg-clip-text font-serif text-3xl font-bold italic tracking-wide text-transparent drop-shadow-sm dark:from-coffee-200 dark:via-coffee-300 dark:to-coffee-500">
+            Зерно
+        </a>
+        <a href="index.html" class="font-semibold text-coffee-600 underline-offset-4 hover:underline dark:text-coffee-300">← На головну</a>
+    </nav>
+</header>
+
+<main class="mx-auto max-w-6xl px-4 py-16">
+    <div class="motion-safe:animate-fade-up text-center">
+        <h1 class="section-title">Меню</h1>
+        <p class="mt-3 font-semibold uppercase tracking-widest text-coffee-500">Кава, чай та випічка</p>
+    </div>
+
+    <div class="mt-12 grid gap-8 lg:grid-cols-2">
+        <section class="motion-safe:reveal rounded-3xl bg-white p-6 shadow-sm ring-1 ring-coffee-100 sm:p-8 dark:bg-coffee-900 dark:ring-coffee-800">
+            <h2 class="font-serif text-3xl font-bold text-coffee-900 dark:text-coffee-50">Еспресо-напої</h2>
+            <ul class="mt-6 space-y-5">
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Еспресо</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">55 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Подвійний шот, 40 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Американо</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">60 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Еспресо та гаряча вода, 250 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Капучино</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">75 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Еспресо з ніжною молочною піною, 250 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Флет вайт</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">80 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Подвійна порція еспресо, тонка піна, 200 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Лате</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">80 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Більше молока, м'який смак, 350 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Раф ванільний</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">95 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Вершки, ваніль та еспресо, 300 мл</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="motion-safe:reveal rounded-3xl bg-white p-6 shadow-sm ring-1 ring-coffee-100 sm:p-8 dark:bg-coffee-900 dark:ring-coffee-800">
+            <h2 class="font-serif text-3xl font-bold text-coffee-900 dark:text-coffee-50">Альтернатива</h2>
+            <ul class="mt-6 space-y-5">
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Фільтр V60</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">90 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Ефіопія Іргачеффе: жасмин, бергамот, 300 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Кемекс на двох</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">150 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Колумбія Уїла: карамель, червоне яблуко, 500 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Аеропрес</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">85 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Кенія Ньєрі: чорна смородина, 250 мл</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="motion-safe:reveal rounded-3xl bg-white p-6 shadow-sm ring-1 ring-coffee-100 sm:p-8 dark:bg-coffee-900 dark:ring-coffee-800">
+            <h2 class="font-serif text-3xl font-bold text-coffee-900 dark:text-coffee-50">Холодні напої</h2>
+            <ul class="mt-6 space-y-5">
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Айс латте</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">85 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Еспресо, холодне молоко та лід, 350 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Колд брю</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">90 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Холодна екстракція 16 годин, 300 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Еспресо-тонік</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">95 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Еспресо, тонік, апельсин, 300 мл</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="motion-safe:reveal rounded-3xl bg-white p-6 shadow-sm ring-1 ring-coffee-100 sm:p-8 dark:bg-coffee-900 dark:ring-coffee-800">
+            <h2 class="font-serif text-3xl font-bold text-coffee-900 dark:text-coffee-50">Чай та інше</h2>
+            <ul class="mt-6 space-y-5">
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Чай листовий</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">60 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Чорний, зелений або трав'яний, 400 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Какао</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">75 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Бельгійський шоколад та молоко, 300 мл</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Матча лате</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">95 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Японська матча з молоком, 300 мл</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="motion-safe:reveal rounded-3xl bg-white p-6 shadow-sm ring-1 ring-coffee-100 sm:p-8 dark:bg-coffee-900 dark:ring-coffee-800">
+            <h2 class="font-serif text-3xl font-bold text-coffee-900 dark:text-coffee-50">Випічка та десерти</h2>
+            <ul class="mt-6 space-y-5">
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Круасан класичний</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">55 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Вершкове масло, 80 г</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Круасан з мигдалем</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">75 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Мигдальний крем та пелюстки, 110 г</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Сирники</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">110 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Зі сметаною та ягідним соусом, 200 г</p>
+                </li>
+                <li>
+                    <div class="flex items-baseline gap-3">
+                        <h3 class="font-semibold text-coffee-900 dark:text-coffee-50">Чізкейк Нью-Йорк</h3>
+                        <span class="flex-1 border-b border-dotted border-coffee-300 dark:border-coffee-700"></span>
+                        <span class="font-bold text-coffee-700 dark:text-coffee-300">105 ₴</span>
+                    </div>
+                    <p class="mt-1 text-sm text-coffee-600 dark:text-coffee-400">Класичний, 130 г</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="mt-16 text-center">
+        <a href="index.html#booking" class="btn-primary">Забронювати столик</a>
+    </div>
+</main>
+
+<footer class="border-t border-coffee-200 dark:border-coffee-800">
+    <div class="mx-auto max-w-6xl px-4 py-8 text-center text-sm">
+        <p>© 2026 Кав'ярня «Зерно». Домашнє завдання 15.1 - Tailwind CSS.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+// ===== Кольори =====
+$color-primary: #5f7a61;
+$color-primary-dark: #48604a;
+$color-accent: #c8734f;
+$color-accent-dark: #a95d3d;
+$color-bg: #f7f3ec;
+$color-surface: #fff;
+$color-sand: #ece4d6;
+$color-text: #2b332d;
+$color-muted: #646d66;
+$color-dark: #1f2a24;
+$color-border: #e2dacb;
+$color-error: #c0392b;
+$color-success: #2e7d4f;
+
+// ===== Шрифти =====
+$font-body: "Manrope", system-ui, -apple-system, "Segoe UI", roboto, sans-serif;
+$font-heading: "Lora", georgia, "Times New Roman", serif;
+
+// ===== Розміри та ефекти =====
+$container-width: 1200px;
+$container-padding: 1rem;
+$header-height: 72px;
+
+$radius: 0.75rem;
+$radius-lg: 1.5rem;
+$radius-pill: 999px;
+
+$shadow: 0 10px 30px rgba($color-dark, 0.08);
+$shadow-lg: 0 20px 50px rgba($color-dark, 0.16);
+
+$transition: 0.3s ease;
+
+// ===== Брейкпоінти (mobile-first) =====
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+);

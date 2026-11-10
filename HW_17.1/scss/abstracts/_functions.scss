@@ -1,0 +1,6 @@
+@use "sass:math";
+
+// Переводить пікселі в rem: rem(24) -> 1.5rem
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}

@@ -1,0 +1,175 @@
+@use "../abstracts" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: $header-height;
+  transition: box-shadow $transition;
+
+  // Розмитий фон на псевдоелементі: backdrop-filter на самій шапці
+  // зробив би її контейнером для position: fixed у мобільного меню
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: "";
+    background: rgba($color-bg, 0.92);
+    backdrop-filter: blur(10px);
+  }
+
+  &.is-scrolled {
+    box-shadow: 0 4px 20px rgba($color-dark, 0.08);
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+
+.logo {
+  font-family: $font-heading;
+  font-size: rem(28);
+  font-weight: 700;
+  font-style: italic;
+  color: $color-dark;
+
+  &__dot {
+    color: $color-accent;
+  }
+
+  &--light {
+    color: $color-surface;
+  }
+}
+
+// ===== Навігація =====
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    padding-block: rem(8);
+    font-size: rem(22);
+    font-weight: 600;
+    transition: color $transition;
+
+    &:hover,
+    &.is-active {
+      color: $color-primary;
+    }
+  }
+
+  &__cta {
+    margin-top: rem(24);
+  }
+
+  // Мобільна версія: панель на весь екран
+  @include mq-down(lg) {
+    position: fixed;
+    inset: $header-height 0 0;
+    display: flex;
+    flex-direction: column;
+    padding: rem(32) $container-padding * 2;
+    overflow-y: auto;
+    visibility: hidden;
+    background: $color-bg;
+    transform: translateX(100%);
+    transition:
+      transform $transition,
+      visibility $transition;
+
+    &.is-open {
+      visibility: visible;
+      transform: none;
+    }
+  }
+
+  // Десктоп: меню в один рядок
+  @include mq(lg) {
+    display: flex;
+    gap: rem(40);
+    align-items: center;
+
+    &__list {
+      flex-direction: row;
+      gap: rem(28);
+    }
+
+    &__link {
+      padding-block: rem(4);
+      font-size: rem(15);
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        content: "";
+        background: currentcolor;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform $transition;
+      }
+
+      &:hover::after,
+      &.is-active::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &__cta {
+      margin-top: 0;
+    }
+  }
+}
+
+// ===== Бургер =====
+.burger {
+  @include flex-center;
+
+  flex-direction: column;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: 0;
+
+  &__line {
+    width: 24px;
+    height: 2px;
+    background: $color-dark;
+    border-radius: 2px;
+    transition:
+      transform $transition,
+      opacity $transition;
+  }
+
+  &[aria-expanded="true"] &__line {
+    &:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+
+  @include mq(lg) {
+    display: none;
+  }
+}

@@ -1,0 +1,23 @@
+// Головний файл: збирає всі частини в css/main.css
+// Abstracts (змінні, функції, міксини) підключаються в кожному partial через @use
+
+// Base
+@use "base/reset";
+@use "base/typography";
+
+// Layout
+@use "layout/container";
+@use "layout/header";
+@use "layout/footer";
+
+// Components
+@use "components/button";
+@use "components/tabs";
+@use "components/slider";
+@use "components/accordion";
+@use "components/form";
+@use "components/reveal";
+
+// Pages
+@use "pages/home";
+@use "pages/schedule";

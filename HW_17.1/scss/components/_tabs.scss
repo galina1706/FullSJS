@@ -1,0 +1,70 @@
+@use "../abstracts" as *;
+
+.tabs {
+  &__list {
+    @include hide-scrollbar;
+
+    display: flex;
+    gap: rem(4);
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto rem(32);
+    padding: rem(6);
+    overflow-x: auto;
+    background: $color-surface;
+    border-radius: $radius-pill;
+    box-shadow: $shadow;
+  }
+
+  &__tab {
+    flex-shrink: 0;
+    padding: rem(10) rem(20);
+    font-weight: 600;
+    color: $color-muted;
+    white-space: nowrap;
+    background: transparent;
+    border: 0;
+    border-radius: $radius-pill;
+    transition:
+      background-color $transition,
+      color $transition;
+
+    &:hover {
+      color: $color-dark;
+    }
+
+    &[aria-selected="true"] {
+      color: $color-surface;
+      background: $color-primary;
+    }
+
+    @include mq(md) {
+      padding-inline: rem(28);
+    }
+  }
+
+  // Компактні таби (дні тижня в розкладі)
+  &__list--compact &__tab {
+    padding-inline: rem(12);
+
+    @include mq(sm) {
+      padding-inline: rem(20);
+    }
+  }
+
+  &__panel {
+    animation: tab-in 0.4s ease both;
+  }
+}
+
+@keyframes tab-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

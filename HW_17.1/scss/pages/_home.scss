@@ -1,0 +1,390 @@
+@use "../abstracts" as *;
+
+// ===== Hero =====
+.hero {
+  padding-block: rem(40) rem(64);
+
+  @include mq(lg) {
+    padding-block: rem(64) rem(96);
+  }
+
+  &__inner {
+    display: grid;
+    gap: rem(48);
+
+    @include mq(lg) {
+      grid-template-columns: 1.1fr 1fr;
+      gap: rem(64);
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 1.6rem + 4vw, 4.5rem);
+
+    em {
+      color: $color-primary;
+    }
+  }
+
+  &__text {
+    max-width: rem(540);
+    margin-top: rem(20);
+    font-size: rem(18);
+    color: $color-muted;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(12);
+    margin-top: rem(32);
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(16);
+    margin-top: rem(40);
+    padding-top: rem(28);
+    border-top: 1px solid $color-border;
+
+    strong {
+      display: block;
+      font-family: $font-heading;
+      font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.25rem);
+      color: $color-dark;
+    }
+
+    span {
+      font-size: rem(14);
+      color: $color-muted;
+    }
+  }
+
+  &__media {
+    position: relative;
+
+    img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: rem(32);
+
+      @include mq(lg) {
+        aspect-ratio: 4 / 5;
+      }
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    bottom: rem(16);
+    left: rem(16);
+    display: flex;
+    gap: rem(12);
+    align-items: center;
+    padding: rem(12) rem(18);
+    font-weight: 700;
+    color: $color-dark;
+    background: $color-surface;
+    border-radius: $radius;
+    box-shadow: $shadow-lg;
+
+    @include mq(lg) {
+      bottom: rem(40);
+      left: rem(-32);
+    }
+  }
+
+  &__badge-icon {
+    @include flex-center;
+
+    width: 40px;
+    height: 40px;
+    color: $color-surface;
+    background: $color-accent;
+    border-radius: 50%;
+  }
+}
+
+// ===== Про нас =====
+.about {
+  display: grid;
+  gap: rem(40);
+
+  @include mq(lg) {
+    grid-template-columns: 1fr 1fr;
+    gap: rem(80);
+    align-items: center;
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    border-radius: $radius-lg;
+  }
+
+  .section__head {
+    margin-bottom: 0;
+    text-align: left;
+  }
+}
+
+.check-list {
+  display: grid;
+  gap: rem(14);
+  margin-top: rem(28);
+
+  li {
+    display: flex;
+    gap: rem(12);
+    align-items: flex-start;
+  }
+
+  svg {
+    flex-shrink: 0;
+    margin-top: rem(2);
+    color: $color-primary;
+  }
+
+  &--light svg {
+    color: $color-surface;
+  }
+}
+
+// ===== Напрями (вміст табів) =====
+.direction {
+  @include card(rem(12));
+
+  display: grid;
+  gap: rem(24);
+
+  @include mq(md) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: rem(16);
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: $radius;
+  }
+
+  &__body {
+    padding: rem(8) rem(12) rem(16);
+
+    @include mq(md) {
+      padding: rem(24);
+    }
+  }
+
+  &__title {
+    font-size: rem(32);
+  }
+
+  &__text {
+    margin-top: rem(12);
+    color: $color-muted;
+  }
+
+  &__meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(12);
+    margin-block: rem(24);
+    padding-block: rem(16);
+    border-block: 1px solid $color-border;
+
+    dt {
+      font-size: rem(13);
+      color: $color-muted;
+    }
+
+    dd {
+      font-weight: 700;
+    }
+  }
+}
+
+// ===== Тренери =====
+.trainer {
+  @include card;
+
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+
+  &__body {
+    padding: rem(20) rem(24) rem(24);
+  }
+
+  &__name {
+    font-size: rem(22);
+  }
+
+  &__role {
+    margin-top: rem(4);
+    font-size: rem(13);
+    font-weight: 700;
+    color: $color-accent-dark;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  &__text {
+    margin-top: rem(12);
+    font-size: rem(15);
+    color: $color-muted;
+  }
+}
+
+// ===== Ціни =====
+.prices {
+  display: grid;
+  gap: rem(24);
+
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+}
+
+.price-card {
+  @include card(rem(32));
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__name {
+    font-size: rem(24);
+  }
+
+  &__desc {
+    margin-top: rem(6);
+    color: $color-muted;
+  }
+
+  &__price {
+    margin-block: rem(24);
+    font-family: $font-heading;
+    font-size: rem(44);
+    font-weight: 700;
+    line-height: 1;
+    color: $color-dark;
+
+    small {
+      font-family: $font-body;
+      font-size: rem(15);
+      font-weight: 500;
+      color: $color-muted;
+    }
+  }
+
+  .check-list {
+    margin-block: 0 rem(32);
+  }
+
+  .btn {
+    margin-top: auto;
+  }
+
+  &__label {
+    position: absolute;
+    top: rem(-14);
+    right: rem(24);
+    padding: rem(6) rem(14);
+    font-size: rem(12);
+    font-weight: 700;
+    color: $color-surface;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: $color-accent;
+    border-radius: $radius-pill;
+  }
+
+  // Виділена картка
+  &--featured {
+    color: rgba($color-surface, 0.85);
+    background: $color-primary;
+    box-shadow: $shadow-lg;
+
+    .price-card__name,
+    .price-card__price {
+      color: $color-surface;
+    }
+
+    .price-card__desc,
+    .price-card__price small {
+      color: rgba($color-surface, 0.75);
+    }
+
+    @include mq(md) {
+      transform: scale(1.04);
+    }
+  }
+}
+
+// ===== Контакти =====
+.contacts {
+  display: grid;
+  gap: rem(40);
+
+  @include mq(lg) {
+    grid-template-columns: 1fr 1.2fr;
+    gap: rem(64);
+  }
+
+  .section__head {
+    margin-bottom: rem(32);
+    text-align: left;
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(20);
+  }
+
+  &__item {
+    display: flex;
+    gap: rem(16);
+    align-items: flex-start;
+
+    b {
+      display: block;
+      color: $color-dark;
+    }
+
+    a:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__icon {
+    @include flex-center;
+
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    color: $color-primary-dark;
+    background: $color-surface;
+    border-radius: 50%;
+    box-shadow: $shadow;
+  }
+
+  &__map {
+    width: 100%;
+    height: rem(260);
+    margin-top: rem(32);
+    border: 0;
+    border-radius: $radius-lg;
+  }
+}

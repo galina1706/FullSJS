@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+.footer {
+  padding-block: rem(56) rem(32);
+  color: rgba($color-surface, 0.7);
+  background: $color-dark;
+
+  &__grid {
+    display: grid;
+    gap: rem(32);
+
+    @include mq(md) {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+  }
+
+  &__text {
+    max-width: rem(320);
+    margin-top: rem(12);
+  }
+
+  &__title {
+    margin-bottom: rem(12);
+    font-family: $font-body;
+    font-size: rem(14);
+    color: $color-surface;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(8);
+  }
+
+  &__link {
+    transition: color $transition;
+
+    &:hover {
+      color: $color-surface;
+    }
+  }
+
+  &__bottom {
+    margin-top: rem(40);
+    padding-top: rem(24);
+    font-size: rem(14);
+    border-top: 1px solid rgba($color-surface, 0.1);
+  }
+}

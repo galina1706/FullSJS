@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Прана - студія йоги у Дніпрі</title>
+    <meta name="description" content="Студія йоги «Прана»: хатха, віньяса, аштанга та йога-нідра в центрі Дніпра. Перше заняття безкоштовно.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=Manrope:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+<nav style="background: #2c3e50; padding: 15px; text-align: center; font-family: sans-serif; box-sizing: border-box;">
+    <a href="../" style="color: #e74c3c; text-decoration: none; font-weight: bold; margin-right: 30px; float: left;">⬅ Назад до всіх домашок</a>
+    <span style="color: #fff; margin-right: 15px; font-weight: bold;">Ви переглядаєте:</span>
+    <a href="index.html" style="color: #3498db; text-decoration: none; font-weight: bold; border-bottom: 2px solid #3498db;">Домашка. Фінальний веб-проєкт</a>
+</nav>
+<a class="skip-link" href="#main">Перейти до вмісту</a>
+
+<!-- HEADER -->
+<header class="header" data-header>
+    <div class="container header__inner">
+        <a class="logo" href="index.html">Прана<span class="logo__dot">.</span></a>
+
+        <nav class="nav" id="nav" aria-label="Головне меню">
+            <ul class="nav__list">
+                <li><a class="nav__link" href="index.html#about">Про нас</a></li>
+                <li><a class="nav__link" href="index.html#directions">Напрями</a></li>
+                <li><a class="nav__link" href="index.html#trainers">Тренери</a></li>
+                <li><a class="nav__link" href="index.html#prices">Ціни</a></li>
+                <li><a class="nav__link" href="schedule.html">Розклад</a></li>
+                <li><a class="nav__link" href="index.html#contacts">Контакти</a></li>
+            </ul>
+            <a class="btn btn--primary nav__cta" href="index.html#booking">Пробне заняття</a>
+        </nav>
+
+        <button class="burger" type="button" aria-controls="nav" aria-expanded="false" aria-label="Відкрити меню" data-burger>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+        </button>
+    </div>
+</header>
+
+<main id="main">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero__inner">
+            <div class="hero__content">
+                <h1 class="hero__title">Знайдіть баланс тіла <em>і розуму</em></h1>
+                <p class="hero__text">
+                    Затишна студія йоги в центрі Дніпра. Невеликі групи, уважні викладачі
+                    та практики для будь-якого рівня - від першого заняття до стійки на руках.
+                </p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="#booking">Записатися на пробне</a>
+                    <a class="btn btn--outline" href="schedule.html">Розклад занять</a>
+                </div>
+                <ul class="hero__stats">
+                    <li><strong>8</strong><span>років досвіду</span></li>
+                    <li><strong>12</strong><span>викладачів</span></li>
+                    <li><strong>40+</strong><span>занять на тиждень</span></li>
+                </ul>
+            </div>
+
+            <div class="hero__media">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=75"
+                     alt="Дівчина практикує йогу на килимку" width="900" height="1125" fetchpriority="high">
+                <p class="hero__badge">
+                    <span class="hero__badge-icon" aria-hidden="true">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    </span>
+                    Перше заняття безкоштовно
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section section--alt" id="about">
+        <div class="container about">
+            <img class="about__img" data-reveal src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?w=900&q=75"
+                 alt="Групове заняття в залі студії" width="900" height="720" loading="lazy">
+            <div data-reveal>
+                <div class="section__head">
+                    <h2 class="section__title">Про нас</h2>
+                    <p class="section__subtitle">Простір для спокою</p>
+                    <p class="section__text">
+                        «Прана» - це два світлі зали з дерев'яною підлогою, усе необхідне обладнання
+                        та команда сертифікованих викладачів. Ми віримо, що йога доступна кожному,
+                        тож підбираємо практику під ваш рівень і самопочуття.
+                    </p>
+                </div>
+                <ul class="check-list">
+                    <li>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+                        Групи до 12 людей - викладач бачить кожного
+                    </li>
+                    <li>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+                        Килимки, блоки та пледи вже чекають у залі
+                    </li>
+                    <li>
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+                        Душові, роздягальні та чайна зона після практики
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIRECTIONS (TABS) -->
+    <section class="section" id="directions">
+        <div class="container">
+            <div class="section__head" data-reveal>
+                <h2 class="section__title">Напрями</h2>
+                <p class="section__subtitle">Оберіть свою практику</p>
+            </div>
+
+            <div class="tabs" data-tabs>
+                <div class="tabs__list" role="tablist" aria-label="Напрями йоги">
+                    <button class="tabs__tab" type="button" role="tab" id="tab-hatha" aria-controls="panel-hatha" aria-selected="true">Хатха</button>
+                    <button class="tabs__tab" type="button" role="tab" id="tab-vinyasa" aria-controls="panel-vinyasa" aria-selected="false" tabindex="-1">Віньяса</button>
+                    <button class="tabs__tab" type="button" role="tab" id="tab-ashtanga" aria-controls="panel-ashtanga" aria-selected="false" tabindex="-1">Аштанга</button>
+                    <button class="tabs__tab" type="button" role="tab" id="tab-nidra" aria-controls="panel-nidra" aria-selected="false" tabindex="-1">Йога-нідра</button>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-hatha" aria-labelledby="tab-hatha">
+                    <article class="direction">
+                        <img class="direction__img" src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=800&q=75"
+                             alt="Практика хатха-йоги" width="800" height="600" loading="lazy">
+                        <div class="direction__body">
+                            <h3 class="direction__title">Хатха-йога</h3>
+                            <p class="direction__text">
+                                Класична практика зі статичними асанами та диханням. Ідеальний старт для новачків:
+                                розвиває гнучкість, зміцнює спину і вчить відчувати власне тіло.
+                            </p>
+                            <dl class="direction__meta">
+                                <div><dt>Рівень</dt><dd>Будь-який</dd></div>
+                                <div><dt>Тривалість</dt><dd>75 хв</dd></div>
+                                <div><dt>Інтенсивність</dt><dd>Низька</dd></div>
+                            </dl>
+                            <a class="btn btn--secondary" href="schedule.html">Дивитися розклад</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-vinyasa" aria-labelledby="tab-vinyasa" hidden>
+                    <article class="direction">
+                        <img class="direction__img" src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=800&q=75"
+                             alt="Динамічна практика віньяса-йоги" width="800" height="600" loading="lazy">
+                        <div class="direction__body">
+                            <h3 class="direction__title">Віньяса-флоу</h3>
+                            <p class="direction__text">
+                                Плавні зв'язки асан у ритмі дихання. Динамічно, музично і творчо -
+                                кожне заняття не схоже на попереднє.
+                            </p>
+                            <dl class="direction__meta">
+                                <div><dt>Рівень</dt><dd>Середній</dd></div>
+                                <div><dt>Тривалість</dt><dd>60 хв</dd></div>
+                                <div><dt>Інтенсивність</dt><dd>Середня</dd></div>
+                            </dl>
+                            <a class="btn btn--secondary" href="schedule.html">Дивитися розклад</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-ashtanga" aria-labelledby="tab-ashtanga" hidden>
+                    <article class="direction">
+                        <img class="direction__img" src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?w=800&q=75"
+                             alt="Силова практика аштанга-йоги" width="800" height="600" loading="lazy">
+                        <div class="direction__body">
+                            <h3 class="direction__title">Аштанга-віньяса</h3>
+                            <p class="direction__text">
+                                Фіксована послідовність асан, яка вимагає сили та витривалості.
+                                Для тих, хто вже має досвід і хоче вийти на новий рівень.
+                            </p>
+                            <dl class="direction__meta">
+                                <div><dt>Рівень</dt><dd>Досвідчений</dd></div>
+                                <div><dt>Тривалість</dt><dd>90 хв</dd></div>
+                                <div><dt>Інтенсивність</dt><dd>Висока</dd></div>
+                            </dl>
+                            <a class="btn btn--secondary" href="schedule.html">Дивитися розклад</a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-nidra" aria-labelledby="tab-nidra" hidden>
+                    <article class="direction">
+                        <img class="direction__img" src="https://images.unsplash.com/photo-1510894347713-fc3ed6fdf539?w=800&q=75"
+                             alt="Медитація та глибоке розслаблення" width="800" height="600" loading="lazy">
+                        <div class="direction__body">
+                            <h3 class="direction__title">Йога-нідра</h3>
+                            <p class="direction__text">
+                                Керована медитація лежачи, що дає глибоке розслаблення. Знімає стрес,
+                                покращує сон і відновлює сили після важкого дня.
+                            </p>
+                            <dl class="direction__meta">
+                                <div><dt>Рівень</dt><dd>Будь-який</dd></div>
+                                <div><dt>Тривалість</dt><dd>45 хв</dd></div>
+                                <div><dt>Інтенсивність</dt><dd>Мінімальна</dd></div>
+                            </dl>
+                            <a class="btn btn--secondary" href="schedule.html">Дивитися розклад</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAINERS (SLIDER) -->
+    <section class="section section--alt" id="trainers">
+        <div class="container">
+            <div class="section__head" data-reveal>
+                <h2 class="section__title">Тренери</h2>
+                <p class="section__subtitle">Наша команда</p>
+            </div>
+
+            <div class="slider" data-slider>
+                <div class="slider__track" data-slider-track tabindex="0" aria-label="Список тренерів">
+                    <article class="slider__slide trainer">
+                        <img class="trainer__img" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=75"
+                             alt="Олена Коваль" width="600" height="750" loading="lazy">
+                        <div class="trainer__body">
+                            <h3 class="trainer__name">Олена Коваль</h3>
+                            <p class="trainer__role">Хатха, йога-нідра</p>
+                            <p class="trainer__text">Засновниця студії. Викладає 10 років, навчалася в Рішікеші.</p>
+                        </div>
+                    </article>
+                    <article class="slider__slide trainer">
+                        <img class="trainer__img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=75"
+                             alt="Максим Гуменюк" width="600" height="750" loading="lazy">
+                        <div class="trainer__body">
+                            <h3 class="trainer__name">Максим Гуменюк</h3>
+                            <p class="trainer__role">Аштанга</p>
+                            <p class="trainer__text">Колишній спортсмен, допомагає поєднати силу та гнучкість.</p>
+                        </div>
+                    </article>
+                    <article class="slider__slide trainer">
+                        <img class="trainer__img" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=75"
+                             alt="Ірина Савчук" width="600" height="750" loading="lazy">
+                        <div class="trainer__body">
+                            <h3 class="trainer__name">Ірина Савчук</h3>
+                            <p class="trainer__role">Віньяса-флоу</p>
+                            <p class="trainer__text">Будує музичні послідовності, після яких хочеться танцювати.</p>
+                        </div>
+                    </article>
+                    <article class="slider__slide trainer">
+                        <img class="trainer__img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=75"
+                             alt="Андрій Литвин" width="600" height="750" loading="lazy">
+                        <div class="trainer__body">
+                            <h3 class="trainer__name">Андрій Литвин</h3>
+                            <p class="trainer__role">Хатха, дихальні практики</p>
+                            <p class="trainer__text">Спеціалізується на йозі для здорової спини та офісних працівників.</p>
+                        </div>
+                    </article>
+                    <article class="slider__slide trainer">
+                        <img class="trainer__img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=75"
+                             alt="Софія Мельник" width="600" height="750" loading="lazy">
+                        <div class="trainer__body">
+                            <h3 class="trainer__name">Софія Мельник</h3>
+                            <p class="trainer__role">Віньяса, йога-нідра</p>
+                            <p class="trainer__text">Веде вечірні заняття для розслаблення і глибокого відновлення.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="slider__controls">
+                    <button class="slider__btn" type="button" aria-label="Попередній тренер" data-slider-prev>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <div class="slider__dots" data-slider-dots></div>
+                    <button class="slider__btn" type="button" aria-label="Наступний тренер" data-slider-next>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICES -->
+    <section class="section" id="prices">
+        <div class="container">
+            <div class="section__head" data-reveal>
+                <h2 class="section__title">Ціни</h2>
+                <p class="section__subtitle">Абонементи та разові заняття</p>
+            </div>
+
+            <div class="prices">
+                <article class="price-card" data-reveal>
+                    <h3 class="price-card__name">Разове</h3>
+                    <p class="price-card__desc">Щоб спробувати</p>
+                    <p class="price-card__price">350 ₴ <small>/ заняття</small></p>
+                    <ul class="check-list">
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Будь-який напрям</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Килимок і обладнання</li>
+                    </ul>
+                    <a class="btn btn--outline btn--block" href="#booking">Записатися</a>
+                </article>
+
+                <article class="price-card price-card--featured" data-reveal>
+                    <span class="price-card__label">Популярний</span>
+                    <h3 class="price-card__name">8 занять</h3>
+                    <p class="price-card__desc">Діє 30 днів</p>
+                    <p class="price-card__price">2400 ₴ <small>/ місяць</small></p>
+                    <ul class="check-list check-list--light">
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>300 ₴ за заняття</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Заморозка до 7 днів</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Будь-який напрям</li>
+                    </ul>
+                    <a class="btn btn--light btn--block" href="#booking">Обрати абонемент</a>
+                </article>
+
+                <article class="price-card" data-reveal>
+                    <h3 class="price-card__name">Безліміт</h3>
+                    <p class="price-card__desc">Для тих, хто практикує щодня</p>
+                    <p class="price-card__price">3900 ₴ <small>/ місяць</small></p>
+                    <ul class="check-list">
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Необмежена кількість занять</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Заморозка до 14 днів</li>
+                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Гостьове заняття для друга</li>
+                    </ul>
+                    <a class="btn btn--outline btn--block" href="#booking">Записатися</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (ACCORDION) -->
+    <section class="section section--alt" id="faq">
+        <div class="container">
+            <div class="section__head" data-reveal>
+                <h2 class="section__title">Питання</h2>
+                <p class="section__subtitle">Що варто знати перед першим заняттям</p>
+            </div>
+
+            <div class="accordion">
+                <details class="accordion__item" name="faq" open>
+                    <summary class="accordion__summary">
+                        Я ніколи не займався йогою. З чого почати?
+                        <span class="accordion__icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                    </summary>
+                    <p class="accordion__content">Радимо хатха-йогу або йога-нідру. Перше заняття безкоштовне, тож можна спокійно спробувати й обрати своє.</p>
+                </details>
+                <details class="accordion__item" name="faq">
+                    <summary class="accordion__summary">
+                        Що взяти з собою?
+                        <span class="accordion__icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                    </summary>
+                    <p class="accordion__content">Лише зручний одяг і пляшку води. Килимки, блоки, ремені та пледи є в студії.</p>
+                </details>
+                <details class="accordion__item" name="faq">
+                    <summary class="accordion__summary">
+                        Чи можна їсти перед заняттям?
+                        <span class="accordion__icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                    </summary>
+                    <p class="accordion__content">Краще займатися через 2 години після щільного прийому їжі. Легкий перекус за годину до практики цілком допустимий.</p>
+                </details>
+                <details class="accordion__item" name="faq">
+                    <summary class="accordion__summary">
+                        Як скасувати або перенести заняття?
+                        <span class="accordion__icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+                    </summary>
+                    <p class="accordion__content">Напишіть або зателефонуйте нам щонайменше за 4 години до початку - заняття не згорить.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTS + FORM -->
+    <section class="section" id="contacts">
+        <div class="container contacts">
+            <div data-reveal>
+                <div class="section__head">
+                    <h2 class="section__title">Контакти</h2>
+                    <p class="section__subtitle">Чекаємо на вас у студії</p>
+                </div>
+                <ul class="contacts__list">
+                    <li class="contacts__item">
+                        <span class="contacts__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                        <span><b>Адреса</b><a href="https://www.google.com/maps/search/?api=1&amp;query=Дніпро,+проспект+Дмитра+Яворницького,+50" target="_blank" rel="noopener">Дніпро, просп. Дмитра Яворницького, 50</a></span>
+                    </li>
+                    <li class="contacts__item">
+                        <span class="contacts__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+                        <span><b>Телефон</b><a href="tel:+380561234567">+38&nbsp;(056)&nbsp;123&#8209;45&#8209;67</a></span>
+                    </li>
+                    <li class="contacts__item">
+                        <span class="contacts__icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+                        <span><b>Графік</b>Пн-Пт: 7:00 - 22:00, Сб-Нд: 9:00 - 20:00</span>
+                    </li>
+                </ul>
+                <iframe class="contacts__map" title="Студія на карті"
+                        src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m2!2m1!1z0JTQvdGW0L_RgNC-LCDQv9GA0L7RgdC_0LXQutGCINCU0LzQuNGC0YDQsCDQr9Cy0L7RgNC90LjRhtGM0LrQvtCz0L4sIDUw"
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <form class="form" id="booking" data-form data-reveal novalidate>
+                <h2 class="form__title">Запис на пробне заняття</h2>
+                <label class="form__field">
+                    <span class="form__label">Ім'я</span>
+                    <input class="form__input" type="text" name="name" autocomplete="name" required minlength="2" placeholder="Ваше ім'я">
+                    <span class="form__error">Вкажіть ім'я (мінімум 2 літери)</span>
+                </label>
+                <label class="form__field">
+                    <span class="form__label">Телефон</span>
+                    <input class="form__input" type="tel" name="phone" autocomplete="tel" required pattern="[+0-9 ()\-]{10,}" placeholder="+380 __ ___ __ __">
+                    <span class="form__error">Вкажіть коректний номер телефону</span>
+                </label>
+                <label class="form__field form__field--full">
+                    <span class="form__label">Напрям</span>
+                    <select class="form__input" name="direction">
+                        <option>Ще не знаю, допоможіть обрати</option>
+                        <option>Хатха-йога</option>
+                        <option>Віньяса-флоу</option>
+                        <option>Аштанга-віньяса</option>
+                        <option>Йога-нідра</option>
+                    </select>
+                </label>
+                <label class="form__field form__field--full">
+                    <span class="form__label">Коментар</span>
+                    <textarea class="form__input" name="message" placeholder="Зручний час, побажання, протипоказання"></textarea>
+                </label>
+                <button class="btn btn--primary form__submit" type="submit">Надіслати заявку</button>
+                <p class="form__status" role="status" data-form-status hidden></p>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div>
+                <a class="logo logo--light" href="index.html">Прана<span class="logo__dot">.</span></a>
+                <p class="footer__text">Студія йоги в центрі Дніпра. Практика для тіла, дихання і спокійного розуму.</p>
+            </div>
+            <div>
+                <h2 class="footer__title">Навігація</h2>
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="index.html#directions">Напрями</a></li>
+                    <li><a class="footer__link" href="schedule.html">Розклад</a></li>
+                    <li><a class="footer__link" href="index.html#prices">Ціни</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="footer__title">Контакти</h2>
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="tel:+380561234567">+38&nbsp;(056)&nbsp;123&#8209;45&#8209;67</a></li>
+                    <li><a class="footer__link" href="mailto:hello@prana.example">hello@prana.example</a></li>
+                    <li>просп. Яворницького, 50</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer__bottom">© <span data-year>2026</span> Студія йоги «Прана». HW 17.1 - фінальний веб-проєкт.</p>
+    </div>
+</footer>
+
+</body>
+</html>

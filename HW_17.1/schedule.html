@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Розклад занять - студія йоги Прана</title>
+    <meta name="description" content="Розклад групових занять студії йоги «Прана» на тиждень.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=Manrope:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти до вмісту</a>
+
+<!-- HEADER -->
+<header class="header" data-header>
+    <div class="container header__inner">
+        <a class="logo" href="index.html">Прана<span class="logo__dot">.</span></a>
+
+        <nav class="nav" id="nav" aria-label="Головне меню">
+            <ul class="nav__list">
+                <li><a class="nav__link" href="index.html#about">Про нас</a></li>
+                <li><a class="nav__link" href="index.html#directions">Напрями</a></li>
+                <li><a class="nav__link" href="index.html#trainers">Тренери</a></li>
+                <li><a class="nav__link" href="index.html#prices">Ціни</a></li>
+                <li><a class="nav__link is-active" href="schedule.html" aria-current="page">Розклад</a></li>
+                <li><a class="nav__link" href="index.html#contacts">Контакти</a></li>
+            </ul>
+            <a class="btn btn--primary nav__cta" href="index.html#booking">Пробне заняття</a>
+        </nav>
+
+        <button class="burger" type="button" aria-controls="nav" aria-expanded="false" aria-label="Відкрити меню" data-burger>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+        </button>
+    </div>
+</header>
+
+<main id="main">
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-hero__title">Розклад занять</h1>
+            <p class="page-hero__text">Оберіть день тижня та напрям. Тривалість заняття залежить від практики: від 45 до 90 хвилин.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="filters" role="group" aria-label="Фільтр за напрямом">
+                <button class="chip" type="button" data-filter="all" aria-pressed="true">Усі</button>
+                <button class="chip" type="button" data-filter="hatha" aria-pressed="false">Хатха-йога</button>
+                <button class="chip" type="button" data-filter="vinyasa" aria-pressed="false">Віньяса-флоу</button>
+                <button class="chip" type="button" data-filter="ashtanga" aria-pressed="false">Аштанга-віньяса</button>
+                <button class="chip" type="button" data-filter="nidra" aria-pressed="false">Йога-нідра</button>
+            </div>
+
+            <div class="tabs" data-tabs data-tabs-today>
+                <div class="tabs__list tabs__list--compact" role="tablist" aria-label="Дні тижня">
+                    <button class="tabs__tab" type="button" role="tab" id="tab-mon" aria-controls="panel-mon" aria-selected="true"><abbr title="Понеділок">Пн</abbr></button>
+                    <button class="tabs__tab" type="button" role="tab" id="tab-tue" aria-controls="panel-tue" aria-selected="false" tabindex="-1"><abbr title="Вівторок">Вт</abbr></button>
+                    <button class="tabs__tab" type="button" role="tab" id="tab-wed" aria-controls="panel-wed" aria-selected="false" tabindex="-1"><abbr title="Середа">Ср</abbr></button>
+                    <button class="tabs__tab" type="button" role="tab" id="tab-thu" aria-controls="panel-thu" aria-selected="false" tabindex="-1"><abbr title="Четвер">Чт</abbr></button>
+                    <button class="tabs__tab" type="button" role="tab" id="tab-fri" aria-controls="panel-fri" aria-selected="false" tabindex="-1"><abbr title="П'ятниця">Пт</abbr></button>
+                    <button class="tabs__tab" type="button" role="tab" id="tab-sat" aria-controls="panel-sat" aria-selected="false" tabindex="-1"><abbr title="Субота">Сб</abbr></button>
+                    <button class="tabs__tab" type="button" role="tab" id="tab-sun" aria-controls="panel-sun" aria-selected="false" tabindex="-1"><abbr title="Неділя">Нд</abbr></button>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-mon" aria-labelledby="tab-mon">
+                    <h2 class="visually-hidden">Понеділок</h2>
+                    <ul class="schedule">
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">07:30</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Андрій Литвин</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="vinyasa">
+                            <time class="lesson__time">09:00</time>
+                            <h3 class="lesson__name">Віньяса-флоу</h3>
+                            <p class="lesson__trainer">Ірина Савчук</p>
+                            <span class="lesson__level">Середній</span>
+                        </li>
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">12:30</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="ashtanga">
+                            <time class="lesson__time">18:00</time>
+                            <h3 class="lesson__name">Аштанга-віньяса</h3>
+                            <p class="lesson__trainer">Максим Гуменюк</p>
+                            <span class="lesson__level">Досвідчений</span>
+                        </li>
+                        <li class="lesson" data-direction="vinyasa">
+                            <time class="lesson__time">19:30</time>
+                            <h3 class="lesson__name">Віньяса-флоу</h3>
+                            <p class="lesson__trainer">Софія Мельник</p>
+                            <span class="lesson__level">Середній</span>
+                        </li>
+                        <li class="lesson" data-direction="nidra">
+                            <time class="lesson__time">21:00</time>
+                            <h3 class="lesson__name">Йога-нідра</h3>
+                            <p class="lesson__trainer">Софія Мельник</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                    </ul>
+                    <p class="schedule__empty" data-schedule-empty hidden>Цього дня немає занять за обраним напрямом.</p>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-tue" aria-labelledby="tab-tue" hidden>
+                    <h2 class="visually-hidden">Вівторок</h2>
+                    <ul class="schedule">
+                        <li class="lesson" data-direction="vinyasa">
+                            <time class="lesson__time">07:30</time>
+                            <h3 class="lesson__name">Віньяса-флоу</h3>
+                            <p class="lesson__trainer">Ірина Савчук</p>
+                            <span class="lesson__level">Середній</span>
+                        </li>
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">10:00</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Андрій Литвин</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="nidra">
+                            <time class="lesson__time">13:00</time>
+                            <h3 class="lesson__name">Йога-нідра</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">18:00</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="ashtanga">
+                            <time class="lesson__time">19:30</time>
+                            <h3 class="lesson__name">Аштанга-віньяса</h3>
+                            <p class="lesson__trainer">Максим Гуменюк</p>
+                            <span class="lesson__level">Досвідчений</span>
+                        </li>
+                        <li class="lesson" data-direction="nidra">
+                            <time class="lesson__time">21:00</time>
+                            <h3 class="lesson__name">Йога-нідра</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                    </ul>
+                    <p class="schedule__empty" data-schedule-empty hidden>Цього дня немає занять за обраним напрямом.</p>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-wed" aria-labelledby="tab-wed" hidden>
+                    <h2 class="visually-hidden">Середа</h2>
+                    <ul class="schedule">
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">07:30</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Андрій Литвин</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="vinyasa">
+                            <time class="lesson__time">09:00</time>
+                            <h3 class="lesson__name">Віньяса-флоу</h3>
+                            <p class="lesson__trainer">Ірина Савчук</p>
+                            <span class="lesson__level">Середній</span>
+                        </li>
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">12:30</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="ashtanga">
+                            <time class="lesson__time">18:00</time>
+                            <h3 class="lesson__name">Аштанга-віньяса</h3>
+                            <p class="lesson__trainer">Максим Гуменюк</p>
+                            <span class="lesson__level">Досвідчений</span>
+                        </li>
+                        <li class="lesson" data-direction="vinyasa">
+                            <time class="lesson__time">19:30</time>
+                            <h3 class="lesson__name">Віньяса-флоу</h3>
+                            <p class="lesson__trainer">Софія Мельник</p>
+                            <span class="lesson__level">Середній</span>
+                        </li>
+                        <li class="lesson" data-direction="nidra">
+                            <time class="lesson__time">21:00</time>
+                            <h3 class="lesson__name">Йога-нідра</h3>
+                            <p class="lesson__trainer">Софія Мельник</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                    </ul>
+                    <p class="schedule__empty" data-schedule-empty hidden>Цього дня немає занять за обраним напрямом.</p>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-thu" aria-labelledby="tab-thu" hidden>
+                    <h2 class="visually-hidden">Четвер</h2>
+                    <ul class="schedule">
+                        <li class="lesson" data-direction="vinyasa">
+                            <time class="lesson__time">07:30</time>
+                            <h3 class="lesson__name">Віньяса-флоу</h3>
+                            <p class="lesson__trainer">Ірина Савчук</p>
+                            <span class="lesson__level">Середній</span>
+                        </li>
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">10:00</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Андрій Литвин</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="nidra">
+                            <time class="lesson__time">13:00</time>
+                            <h3 class="lesson__name">Йога-нідра</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">18:00</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="ashtanga">
+                            <time class="lesson__time">19:30</time>
+                            <h3 class="lesson__name">Аштанга-віньяса</h3>
+                            <p class="lesson__trainer">Максим Гуменюк</p>
+                            <span class="lesson__level">Досвідчений</span>
+                        </li>
+                        <li class="lesson" data-direction="nidra">
+                            <time class="lesson__time">21:00</time>
+                            <h3 class="lesson__name">Йога-нідра</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                    </ul>
+                    <p class="schedule__empty" data-schedule-empty hidden>Цього дня немає занять за обраним напрямом.</p>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-fri" aria-labelledby="tab-fri" hidden>
+                    <h2 class="visually-hidden">П'ятниця</h2>
+                    <ul class="schedule">
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">07:30</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Андрій Литвин</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="vinyasa">
+                            <time class="lesson__time">09:00</time>
+                            <h3 class="lesson__name">Віньяса-флоу</h3>
+                            <p class="lesson__trainer">Ірина Савчук</p>
+                            <span class="lesson__level">Середній</span>
+                        </li>
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">12:30</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="ashtanga">
+                            <time class="lesson__time">18:00</time>
+                            <h3 class="lesson__name">Аштанга-віньяса</h3>
+                            <p class="lesson__trainer">Максим Гуменюк</p>
+                            <span class="lesson__level">Досвідчений</span>
+                        </li>
+                        <li class="lesson" data-direction="vinyasa">
+                            <time class="lesson__time">19:30</time>
+                            <h3 class="lesson__name">Віньяса-флоу</h3>
+                            <p class="lesson__trainer">Софія Мельник</p>
+                            <span class="lesson__level">Середній</span>
+                        </li>
+                    </ul>
+                    <p class="schedule__empty" data-schedule-empty hidden>Цього дня немає занять за обраним напрямом.</p>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-sat" aria-labelledby="tab-sat" hidden>
+                    <h2 class="visually-hidden">Субота</h2>
+                    <ul class="schedule">
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">10:00</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="vinyasa">
+                            <time class="lesson__time">11:30</time>
+                            <h3 class="lesson__name">Віньяса-флоу</h3>
+                            <p class="lesson__trainer">Софія Мельник</p>
+                            <span class="lesson__level">Середній</span>
+                        </li>
+                        <li class="lesson" data-direction="ashtanga">
+                            <time class="lesson__time">13:00</time>
+                            <h3 class="lesson__name">Аштанга-віньяса</h3>
+                            <p class="lesson__trainer">Максим Гуменюк</p>
+                            <span class="lesson__level">Досвідчений</span>
+                        </li>
+                        <li class="lesson" data-direction="nidra">
+                            <time class="lesson__time">17:00</time>
+                            <h3 class="lesson__name">Йога-нідра</h3>
+                            <p class="lesson__trainer">Софія Мельник</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                    </ul>
+                    <p class="schedule__empty" data-schedule-empty hidden>Цього дня немає занять за обраним напрямом.</p>
+                </div>
+
+                <div class="tabs__panel" role="tabpanel" id="panel-sun" aria-labelledby="tab-sun" hidden>
+                    <h2 class="visually-hidden">Неділя</h2>
+                    <ul class="schedule">
+                        <li class="lesson" data-direction="hatha">
+                            <time class="lesson__time">10:00</time>
+                            <h3 class="lesson__name">Хатха-йога</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                        <li class="lesson" data-direction="vinyasa">
+                            <time class="lesson__time">11:30</time>
+                            <h3 class="lesson__name">Віньяса-флоу</h3>
+                            <p class="lesson__trainer">Софія Мельник</p>
+                            <span class="lesson__level">Середній</span>
+                        </li>
+                        <li class="lesson" data-direction="ashtanga">
+                            <time class="lesson__time">13:00</time>
+                            <h3 class="lesson__name">Аштанга-віньяса</h3>
+                            <p class="lesson__trainer">Максим Гуменюк</p>
+                            <span class="lesson__level">Досвідчений</span>
+                        </li>
+                        <li class="lesson" data-direction="nidra">
+                            <time class="lesson__time">16:00</time>
+                            <h3 class="lesson__name">Йога-нідра</h3>
+                            <p class="lesson__trainer">Олена Коваль</p>
+                            <span class="lesson__level">Будь-який</span>
+                        </li>
+                    </ul>
+                    <p class="schedule__empty" data-schedule-empty hidden>Цього дня немає занять за обраним напрямом.</p>
+                </div>
+            </div>
+
+            <p class="schedule-cta"><a class="btn btn--primary" href="index.html#booking">Записатися на пробне заняття</a></p>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__grid">
+            <div>
+                <a class="logo logo--light" href="index.html">Прана<span class="logo__dot">.</span></a>
+                <p class="footer__text">Студія йоги в центрі Дніпра. Практика для тіла, дихання і спокійного розуму.</p>
+            </div>
+            <div>
+                <h2 class="footer__title">Навігація</h2>
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="index.html#directions">Напрями</a></li>
+                    <li><a class="footer__link" href="schedule.html">Розклад</a></li>
+                    <li><a class="footer__link" href="index.html#prices">Ціни</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="footer__title">Контакти</h2>
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="tel:+380561234567">+38&nbsp;(056)&nbsp;123&#8209;45&#8209;67</a></li>
+                    <li><a class="footer__link" href="mailto:hello@prana.example">hello@prana.example</a></li>
+                    <li>просп. Яворницького, 50</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer__bottom">© <span data-year>2026</span> Студія йоги «Прана». HW 17.1 - фінальний веб-проєкт.</p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+@use "../abstracts" as *;
+
+$slider-gap: rem(24);
+
+.slider {
+  &__track {
+    @include hide-scrollbar;
+
+    display: flex;
+    gap: $slider-gap;
+    padding-bottom: rem(8);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+  }
+
+  &__slide {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+
+    @include mq(sm) {
+      flex-basis: calc((100% - #{$slider-gap}) / 2);
+    }
+
+    @include mq(lg) {
+      flex-basis: calc((100% - #{$slider-gap} * 2) / 3);
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: rem(20);
+    align-items: center;
+    justify-content: center;
+    margin-top: rem(32);
+  }
+
+  &__btn {
+    @include flex-center;
+
+    width: 48px;
+    height: 48px;
+    color: $color-primary-dark;
+    background: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: 50%;
+    transition:
+      background-color $transition,
+      color $transition,
+      opacity $transition;
+
+    &:hover:not(:disabled) {
+      color: $color-surface;
+      background: $color-primary;
+    }
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.4;
+    }
+  }
+
+  &__dots {
+    display: flex;
+    gap: rem(8);
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    background: $color-border;
+    border: 0;
+    border-radius: $radius-pill;
+    transition:
+      width $transition,
+      background-color $transition;
+
+    &.is-active {
+      width: 28px;
+      background: $color-primary;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@use "../abstracts" as *;
+
+.accordion {
+  display: grid;
+  gap: rem(12);
+  max-width: rem(800);
+  margin-inline: auto;
+
+  &__item {
+    @include card;
+
+    overflow: hidden;
+  }
+
+  &__summary {
+    display: flex;
+    gap: rem(16);
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(20) rem(24);
+    font-weight: 700;
+    color: $color-dark;
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__icon {
+    @include flex-center;
+
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    color: $color-primary-dark;
+    background: $color-sand;
+    border-radius: 50%;
+    transition:
+      transform $transition,
+      background-color $transition,
+      color $transition;
+  }
+
+  &__item[open] &__icon {
+    color: $color-surface;
+    background: $color-primary;
+    transform: rotate(45deg);
+  }
+
+  &__content {
+    padding: 0 rem(24) rem(24);
+    color: $color-muted;
+  }
+}
